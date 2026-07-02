@@ -1,0 +1,13 @@
+<svg width="640" height="480" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="640" y2="480">
+      <stop stop-color="#303547"/>
+      <stop offset="1" stop-color="#171922"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" rx="24" fill="url(#g)"/>
+  <circle cx="320" cy="180" r="96" fill="#CBFF3C" fill-opacity="0.12"/>
+  <rect x="188" y="305" width="264" height="16" rx="8" fill="#E8EAF3" fill-opacity="0.26"/>
+  <rect x="238" y="337" width="164" height="14" rx="7" fill="#E8EAF3" fill-opacity="0.18"/>
+  <text x="320" y="408" text-anchor="middle" fill="#E8EAF3" fill-opacity="0.65" font-size="18" font-family="Arial">Replace with PDF asset</text>
+</svg>

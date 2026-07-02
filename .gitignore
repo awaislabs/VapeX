@@ -1,0 +1,58 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# next.js
+.next/
+out/
+build/
+dist/
+
+# production
+*.tsbuildinfo
+
+# env files (secrets)
+.env
+.env.*
+!.env.example
+
+# debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# testing
+coverage/
+.nyc_output/
+
+# vercel / deployment
+.vercel/
+
+# turbo
+.turbo/
+
+# cache
+.cache/
+.eslintcache
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# cursor / local workspace assets
+.cursor/
+assets/
+
+# misc
+*.pem
+*.log
