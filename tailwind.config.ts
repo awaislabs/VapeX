@@ -35,9 +35,7 @@ const config: Config = {
       },
       boxShadow: {
         card: "0 4px 24px rgba(0, 0, 0, 0.08)",
-        review: "0 2px 16px rgba(0, 0, 0, 0.06)"
-      },
-      boxShadow: {
+        review: "0 2px 16px rgba(0, 0, 0, 0.06)",
         glow: "0 0 0 1px rgba(203,255,60,0.25), 0 8px 30px rgba(0,0,0,0.35)"
       }
     }

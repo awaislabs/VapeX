@@ -18,13 +18,10 @@ export const images = {
     p4: "/images/products/product-4.png"
   },
   cta: "/images/home/cta-bg.png",
-  flavor: {
-    left: "https://images.unsplash.com/photo-1596350678850-16e032c959e3?w=600&q=80&auto=format&fit=crop",
-    right: "https://images.unsplash.com/photo-1464960355363-7466e66c70f4?w=600&q=80&auto=format&fit=crop"
-  },
+  flavor: "/images/home/flavor-bg.png",
   avatars: {
-    a1: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80&auto=format&fit=crop",
-    a2: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80&auto=format&fit=crop",
-    a3: "https://images.unsplash.com/photo-1507003211160-0a1dd7228f2d?w=200&q=80&auto=format&fit=crop"
+    a1: "/images/home/review-avatar.svg",
+    a2: "/images/home/review-avatar.svg",
+    a3: "/images/home/review-avatar.svg"
   }
 } as const;
