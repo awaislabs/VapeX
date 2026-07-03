@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Container } from "@/components/common/Container";
+import { images } from "@/lib/images";
 import { ProductCard } from "@/components/common/ProductCard";
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
 import { products } from "@/lib/site-data";
@@ -106,7 +107,14 @@ export function CartPage() {
                     className="grid grid-cols-[2fr_1fr_1fr_1fr_auto] items-center gap-4 border-b border-black/10 py-5 text-sm"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="relative h-16 w-16 shrink-0 border border-black/10 bg-white">
+                      <div
+                        className="relative h-16 w-16 shrink-0 overflow-hidden border border-black/10"
+                        style={{
+                          backgroundImage: `url(${images.productBg})`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center"
+                        }}
+                      >
                         <Image
                           src={item.image}
                           alt={item.subtitle}

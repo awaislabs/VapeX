@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/types/site";
 import { formatPrice } from "@/lib/format";
+import { ProductImageFrame } from "@/components/common/ProductImageFrame";
 import { StarRating } from "./StarRating";
 
 type HomeProductCardProps = {
@@ -11,15 +11,11 @@ type HomeProductCardProps = {
 export function HomeProductCard({ product }: HomeProductCardProps) {
   return (
     <article className="group flex h-full flex-col border border-[#E5E5E5] bg-white transition duration-300 group-hover/products:brightness-[0.92] hover:!brightness-105 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
-      <div className="relative h-[240px] w-full shrink-0 bg-white md:h-[260px]">
-        <Image
-          src={product.image}
-          alt={product.subtitle}
-          fill
-          sizes="(max-width: 768px) 50vw, 25vw"
-          className="object-contain object-center p-5"
-        />
-      </div>
+      <ProductImageFrame
+        product={product}
+        className="h-[240px] w-full shrink-0 md:h-[260px]"
+        sizes="(max-width: 768px) 50vw, 25vw"
+      />
 
       <div className="flex flex-1 flex-col items-center px-5 pb-6 pt-4 text-center">
         <p className="w-full text-[10px] font-medium uppercase tracking-[0.12em] text-brand">

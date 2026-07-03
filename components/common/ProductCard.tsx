@@ -1,11 +1,11 @@
 "use client";
 
 import { Heart } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/types/site";
 import { formatPrice } from "@/lib/format";
 import { useCart } from "@/lib/cart-context";
+import { ProductImageFrame } from "./ProductImageFrame";
 
 type ProductCardProps = {
   product: Product;
@@ -14,7 +14,6 @@ type ProductCardProps = {
 export function ProductCard({ product }: ProductCardProps) {
   const { toggleWishlist, isWishlisted } = useCart();
   const wishlisted = isWishlisted(product.id);
-  const isEliquid = product.category === "E-Liquids";
 
   return (
     <article className="group relative border border-black/10 bg-white p-3 transition hover:shadow-card">
@@ -30,21 +29,7 @@ export function ProductCard({ product }: ProductCardProps) {
       </button>
 
       <Link href={`/product/${product.slug}`} className="block">
-        <div
-          className={`relative mb-3 aspect-square overflow-hidden ${
-            isEliquid ? "bg-[#f5f5f5]" : "bg-gradient-to-b from-brand-light to-brand"
-          }`}
-        >
-          <Image
-            src={product.image}
-            alt={product.subtitle}
-            fill
-            sizes="(max-width: 768px) 100vw, 25vw"
-            className={`transition duration-300 group-hover:scale-105 ${
-              isEliquid ? "object-cover object-center" : "object-contain p-3"
-            }`}
-          />
-        </div>
+        <ProductImageFrame product={product} className="mb-3 aspect-square" />
         <p className="text-[9px] text-black/70">{product.title}</p>
         <h3 className="mb-2 mt-1 text-[17px] leading-6 text-black">{product.subtitle}</h3>
         <div className="flex items-center gap-2 text-[12px]">

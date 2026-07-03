@@ -1,7 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
+import { ProductImageGallery } from "@/components/product/ProductImageGallery";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Container } from "@/components/common/Container";
@@ -56,16 +55,7 @@ export function ProductDetailsPage({ product }: ProductDetailsPageProps) {
           ]}
         />
         <section className="grid gap-10 py-12 lg:grid-cols-2">
-          <div className="relative aspect-square border border-black/10 bg-white">
-            <Image
-              src={product.image}
-              alt={product.subtitle}
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain p-6"
-              priority
-            />
-          </div>
+          <ProductImageGallery product={product} />
           <div>
             <p className="text-xs text-black/60">{product.title}</p>
             <h2 className="mt-2 text-4xl font-semibold">{product.subtitle}</h2>

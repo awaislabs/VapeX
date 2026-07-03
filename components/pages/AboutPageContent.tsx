@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Award, Shield, Sparkles, Users } from "lucide-react";
 import { Container } from "@/components/common/Container";
+import { ProductImageFrame } from "@/components/common/ProductImageFrame";
 import { PageHero } from "./PageHero";
-import { images } from "@/lib/images";
+import { getProductBySlug } from "@/lib/products";
 
 const values = [
   {
@@ -36,6 +36,8 @@ const stats = [
 ];
 
 export function AboutPageContent() {
+  const featuredProduct = getProductBySlug("silver-pod-mod-kit");
+
   return (
     <div>
       <PageHero
@@ -47,15 +49,15 @@ export function AboutPageContent() {
       <section className="bg-white py-16 md:py-20">
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="relative aspect-[4/3] overflow-hidden border border-black/10 bg-gradient-to-br from-brand-deeper to-brand">
-              <Image
-                src={images.products.p1}
-                alt="VapeX premium products"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain p-8"
-              />
-            </div>
+            {featuredProduct ? (
+              <div className="overflow-hidden border border-black/10">
+                <ProductImageFrame
+                  product={featuredProduct}
+                  className="aspect-[4/3]"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            ) : null}
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand">
                 Our Story

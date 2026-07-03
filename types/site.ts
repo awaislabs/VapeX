@@ -29,9 +29,18 @@ export type BlogPost = {
   slug: string;
   date: string;
   tags: string;
+  tagList: string[];
   title: string;
   excerpt: string;
   content: string;
+  sections: { heading?: string; body: string }[];
+  author: string;
+  authorRole: string;
+  readTime: string;
+  coverImage: string;
+  featured?: boolean;
+  youtubeVideoId: string;
+  relatedYoutube: { id: string; title: string }[];
 };
 
 export type VideoItem = {
