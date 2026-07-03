@@ -9,16 +9,10 @@ import { PageHero } from "@/components/pages/PageHero";
 import { BlogCard } from "@/components/blog/BlogCard";
 import { YoutubeLink } from "@/components/blog/YoutubeEmbed";
 import { blogPosts } from "@/lib/site-data";
+import { featuredVideos } from "@/lib/videos";
 import { getAllTags, getFeaturedPost } from "@/lib/blog";
 
 const POSTS_PER_PAGE = 4;
-
-const featuredVideos = [
-  { id: "ZRBq6bWPspk", title: "Vaping 101 — Complete Beginner's Guide" },
-  { id: "Ufh3WZyXx8o", title: "18650 Battery Safety for Vaping" },
-  { id: "2qW826Z0ebo", title: "VG vs PG — What's the Difference?" },
-  { id: "8lGz7oQ8KAY", title: "Vape Coils Explained" }
-];
 
 export function BlogPageClient() {
   const searchParams = useSearchParams();
@@ -190,7 +184,12 @@ export function BlogPageClient() {
                 </p>
                 <div className="mt-4 space-y-3">
                   {featuredVideos.map((video) => (
-                    <YoutubeLink key={video.id} videoId={video.id} title={video.title} />
+                    <YoutubeLink
+                      key={video.id}
+                      videoId={video.youtubeId}
+                      title={video.title}
+                      duration={video.duration}
+                    />
                   ))}
                 </div>
               </div>

@@ -32,10 +32,10 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     coverImage: images.hero,
     featured: true,
-    youtubeVideoId: "ZRBq6bWPspk",
+    youtubeVideoId: "fb1PfwEIoHY",
     relatedYoutube: [
-      { id: "ZRBq6bWPspk", title: "Vaping 101 — Beginner's Guide" },
-      { id: "xGcfBRkJSWQ", title: "Vaping Etiquette Tips" }
+      { id: "fb1PfwEIoHY", title: "Vaping 101 — Beginner's Guide" },
+      { id: "9GiO5duBeC4", title: "Pod Device Beginner's Guide" }
     ]
   },
   {
@@ -67,10 +67,10 @@ export const blogPosts: BlogPost[] = [
     authorRole: "Hardware Specialist",
     readTime: "6 min read",
     coverImage: images.products.deviceCaliburnGk3,
-    youtubeVideoId: "8lGz7oQ8KAY",
+    youtubeVideoId: "QJ4wrOaKYDY",
     relatedYoutube: [
-      { id: "8lGz7oQ8KAY", title: "Vape Coils Explained" },
-      { id: "ZRBq6bWPspk", title: "How to Prime a New Coil" }
+      { id: "QJ4wrOaKYDY", title: "Vape Coils Explained" },
+      { id: "rburezUQDZw", title: "How to Prime a New Coil" }
     ]
   },
   {
@@ -102,10 +102,10 @@ export const blogPosts: BlogPost[] = [
     authorRole: "Flavor Curator",
     readTime: "7 min read",
     coverImage: images.products.eliquidRadiolaPerfectDay,
-    youtubeVideoId: "2qW826Z0ebo",
+    youtubeVideoId: "rN4tnJR4BcQ",
     relatedYoutube: [
-      { id: "2qW826Z0ebo", title: "VG vs PG Ratios Explained" },
-      { id: "ZRBq6bWPspk", title: "Best E-Liquid Flavors for Beginners" }
+      { id: "rN4tnJR4BcQ", title: "VG vs PG Ratios Explained" },
+      { id: "fb1PfwEIoHY", title: "Best E-Liquid Flavors for Beginners" }
     ]
   },
   {
@@ -137,10 +137,10 @@ export const blogPosts: BlogPost[] = [
     authorRole: "Safety Editor",
     readTime: "4 min read",
     coverImage: images.products.deviceOxvaPod,
-    youtubeVideoId: "Ufh3WZyXx8o",
+    youtubeVideoId: "pGBX8IJ7uhw",
     relatedYoutube: [
-      { id: "Ufh3WZyXx8o", title: "18650 Battery Safety for Vaping" },
-      { id: "8lGz7oQ8KAY", title: "Safe Charging Practices" }
+      { id: "pGBX8IJ7uhw", title: "18650 Battery Safety for Vaping" },
+      { id: "QJ4wrOaKYDY", title: "Safe Charging Practices" }
     ]
   },
   {
@@ -168,10 +168,10 @@ export const blogPosts: BlogPost[] = [
     authorRole: "Product Advisor",
     readTime: "5 min read",
     coverImage: images.categories.starter,
-    youtubeVideoId: "ZRBq6bWPspk",
+    youtubeVideoId: "9GiO5duBeC4",
     relatedYoutube: [
-      { id: "ZRBq6bWPspk", title: "Best Starter Vape Kits" },
-      { id: "2qW826Z0ebo", title: "Pod vs Mod — Which Is Right for You?" }
+      { id: "9GiO5duBeC4", title: "Best Starter Vape Kits" },
+      { id: "UgqlzMRxJFo", title: "Pod vs Mod — Which Is Right for You?" }
     ]
   },
   {
@@ -199,10 +199,10 @@ export const blogPosts: BlogPost[] = [
     authorRole: "Review Editor",
     readTime: "6 min read",
     coverImage: images.products.eliquidMafiaMist,
-    youtubeVideoId: "2qW826Z0ebo",
+    youtubeVideoId: "rN4tnJR4BcQ",
     relatedYoutube: [
-      { id: "2qW826Z0ebo", title: "Top E-Liquid Brands Reviewed" },
-      { id: "ZRBq6bWPspk", title: "How to Choose Quality E-Liquid" }
+      { id: "rN4tnJR4BcQ", title: "Top E-Liquid Brands Reviewed" },
+      { id: "fb1PfwEIoHY", title: "How to Choose Quality E-Liquid" }
     ]
   }
-] ;
+];

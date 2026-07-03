@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, ShoppingBag, X } from "lucide-react";
 import { useState } from "react";
 import { Container } from "./Container";
@@ -15,8 +16,15 @@ export function Header() {
     <header className="z-30 border-b border-black/10 bg-white">
       <Container>
         <div className="flex h-[74px] items-center justify-between gap-4">
-          <Link href="/" className="text-xl font-bold uppercase tracking-[0.12em]">
-            LOGO
+          <Link href="/" className="inline-flex items-center" aria-label="VapeX home">
+            <Image
+              src="/images/brand/vapex-logo-header.png"
+              alt="VapeX Store"
+              width={220}
+              height={62}
+              className="h-auto w-[170px] sm:w-[220px]"
+              priority
+            />
           </Link>
           <nav className="hidden items-center gap-10 text-[11px] tracking-[0.08em] text-black/80 lg:flex">
             {navItems.map((item) => (

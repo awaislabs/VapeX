@@ -14,7 +14,12 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "VapeX",
-  description: "VapeX UI implementation from provided PDF pages"
+  description: "VapeX UI implementation from provided PDF pages",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png"
+  }
 };
 
 export default function RootLayout({

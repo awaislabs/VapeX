@@ -1,4 +1,4 @@
-import { Product, VideoItem } from "@/types/site";
+import { Product } from "@/types/site";
 import { images } from "@/lib/images";
 
 export const navItems = [
@@ -704,9 +704,4 @@ export const products: Product[] = [
 ];
 
 export { blogPosts } from "@/lib/blog-data";
-
-export const videos: VideoItem[] = Array.from({ length: 8 }).map((_, idx) => ({
-  id: `v${idx + 1}`,
-  title: "DMT Always Shows Shane Mauss the Same... Watch Later   Share",
-  description: "Product review and setup walkthrough for VapeX hardware and e-liquids."
-}));
+export { videos } from "@/lib/videos";

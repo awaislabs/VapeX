@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { Container } from "./Container";
 
@@ -14,6 +15,8 @@ const exploreLinks = [
   { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "All Products", href: "/products" },
+  { label: "Blog", href: "/blog" },
+  { label: "Videos", href: "/videos" },
   { label: "Contact", href: "/contact" }
 ];
 
@@ -23,7 +26,15 @@ export function Footer() {
       <Container>
         <div className="grid gap-10 pb-12 md:grid-cols-4">
           <div>
-            <p className="mb-4 text-xl font-semibold uppercase tracking-[0.22em]">LOGO HERE</p>
+            <Link href="/" aria-label="VapeX home" className="mb-4 inline-flex">
+              <Image
+                src="/images/brand/vapex-logo-footer.png"
+                alt="VapeX Store"
+                width={180}
+                height={54}
+                className="h-auto w-[160px] rounded-sm"
+              />
+            </Link>
             <p className="max-w-[240px] text-sm leading-6 text-white/80">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit.
             </p>

@@ -45,8 +45,10 @@ export type BlogPost = {
 
 export type VideoItem = {
   id: string;
+  youtubeId: string;
   title: string;
   description: string;
+  duration?: string;
 };
 
 export type CartItem = {

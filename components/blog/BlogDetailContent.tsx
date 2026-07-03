@@ -141,7 +141,11 @@ export function BlogDetailContent({ post }: BlogDetailContentProps) {
                   </h3>
                   <div className="mt-4 space-y-3">
                     {post.relatedYoutube.map((video) => (
-                      <YoutubeLink key={video.id} videoId={video.id} title={video.title} />
+                      <YoutubeLink
+                        key={video.id}
+                        videoId={video.id}
+                        title={video.title}
+                      />
                     ))}
                   </div>
                 </div>
