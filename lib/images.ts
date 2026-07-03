@@ -15,7 +15,10 @@ export const images = {
     p1: "/images/products/product-1.png",
     p2: "/images/products/product-2.png",
     p3: "/images/products/product-3.png",
-    p4: "/images/products/product-4.png"
+    p4: "/images/products/product-4.png",
+    eliquidMafiaMist: "/images/products/eliquid-mafia-mist.png",
+    eliquidRadiolaTrio: "/images/products/eliquid-radiola-trio.png",
+    eliquidRadiolaPerfectDay: "/images/products/eliquid-radiola-perfect-day.png"
   },
   cta: "/images/home/cta-bg.png",
   flavor: "/images/home/flavor-bg.png",

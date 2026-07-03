@@ -14,6 +14,7 @@ type ProductCardProps = {
 export function ProductCard({ product }: ProductCardProps) {
   const { toggleWishlist, isWishlisted } = useCart();
   const wishlisted = isWishlisted(product.id);
+  const isEliquid = product.category === "E-Liquids";
 
   return (
     <article className="group relative border border-black/10 bg-white p-3 transition hover:shadow-card">
@@ -29,13 +30,19 @@ export function ProductCard({ product }: ProductCardProps) {
       </button>
 
       <Link href={`/product/${product.slug}`} className="block">
-        <div className="relative mb-3 aspect-square overflow-hidden bg-gradient-to-b from-brand-light to-brand">
+        <div
+          className={`relative mb-3 aspect-square overflow-hidden ${
+            isEliquid ? "bg-[#f5f5f5]" : "bg-gradient-to-b from-brand-light to-brand"
+          }`}
+        >
           <Image
             src={product.image}
             alt={product.subtitle}
             fill
             sizes="(max-width: 768px) 100vw, 25vw"
-            className="object-contain p-3 transition duration-300 group-hover:scale-105"
+            className={`transition duration-300 group-hover:scale-105 ${
+              isEliquid ? "object-cover object-center" : "object-contain p-3"
+            }`}
           />
         </div>
         <p className="text-[9px] text-black/70">{product.title}</p>

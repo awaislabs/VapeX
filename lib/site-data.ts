@@ -5,7 +5,7 @@ export const navItems = [
   { label: "Home", href: "/" },
   { label: "aBOUT US", href: "/about" },
   { label: "SERVICES", href: "/services" },
-  { label: "PAGES", href: "/products" },
+  { label: "ALL PRODUCTS", href: "/products" },
   { label: "CONTACT", href: "/contact" }
 ] as const;
 
@@ -25,7 +25,7 @@ export const categories = [
   "Flavours"
 ] as const;
 
-export const brands = ["VapeX", "Aspire", "Innokin", "Seriously Nice", "Coolfire"] as const;
+export const brands = ["VapeX", "Aspire", "Innokin", "Seriously Nice", "Coolfire", "Mafia Mist", "Radiola Juices"] as const;
 
 export const COUPON_CODE = "VAPEX10";
 export const COUPON_DISCOUNT = 0.1;
@@ -182,8 +182,8 @@ export const products: Product[] = [
     title: "Seriously Nice Grape",
     subtitle: "100ml Shortfill E-Liquid",
     price: 34.9,
-    image: productImages[3],
-    images: [productImages[3]],
+    image: images.products.eliquidRadiolaTrio,
+    images: [images.products.eliquidRadiolaTrio],
     description: "Bold grape flavor e-liquid with icy finish and smooth vapor.",
     longDescription:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
@@ -198,6 +198,111 @@ export const products: Product[] = [
       { id: "v8-3mg", label: "3mg", price: 36.9 },
       { id: "v8-6mg", label: "6mg", price: 36.9 }
     ]
+  },
+  {
+    id: "p13",
+    slug: "mafia-mist-berry-ice",
+    title: "Mafia Mist",
+    subtitle: "Berry Ice 60ml",
+    price: 29.9,
+    oldPrice: 34.9,
+    image: images.products.eliquidMafiaMist,
+    images: [images.products.eliquidMafiaMist],
+    description: "Bold berry flavor with a refreshing menthol ice finish. 60ml chubby gorilla bottle.",
+    longDescription:
+      "Mafia Mist Berry Ice delivers vibrant berry notes layered with a cool menthol exhale. Premium 60ml shortfill in a child-resistant chubby gorilla bottle — perfect for sub-ohm devices and all-day vaping.",
+    rating: 5,
+    reviewCount: 48,
+    inStock: true,
+    brand: "Mafia Mist",
+    category: "E-Liquids",
+    onSale: true,
+    variants: [
+      { id: "v13-0mg", label: "0mg", price: 29.9 },
+      { id: "v13-3mg", label: "3mg", price: 31.9 }
+    ]
+  },
+  {
+    id: "p14",
+    slug: "mafia-mist-morango-cremoso",
+    title: "Mafia Mist",
+    subtitle: "Morango Cremoso 60ml",
+    price: 29.9,
+    oldPrice: 34.9,
+    image: images.products.eliquidMafiaMist,
+    images: [images.products.eliquidMafiaMist],
+    description: "Creamy strawberry blend with smooth, dessert-like sweetness. 60ml bottle.",
+    longDescription:
+      "Morango Cremoso — Portuguese for creamy strawberry — is a rich, smooth e-liquid with ripe strawberry and velvety cream notes. 60ml format ideal for pod systems and starter kits.",
+    rating: 5,
+    reviewCount: 41,
+    inStock: true,
+    brand: "Mafia Mist",
+    category: "E-Liquids",
+    onSale: true
+  },
+  {
+    id: "p15",
+    slug: "radiola-take-five",
+    title: "Radiola Juices",
+    subtitle: "Take Five 60ml",
+    price: 32.9,
+    image: images.products.eliquidRadiolaTrio,
+    images: [images.products.eliquidRadiolaTrio],
+    description: "Music-inspired blend with 70VG / 30PG for rich vapor and bold flavor.",
+    longDescription:
+      "Radiola Juices Take Five features a vintage gramophone-inspired label and a balanced 70VG / 30PG ratio. Clear glass dropper bottle with premium flavor crafted for cloud chasers and flavor lovers alike.",
+    rating: 5,
+    reviewCount: 33,
+    inStock: true,
+    brand: "Radiola Juices",
+    category: "E-Liquids",
+    onSale: false,
+    variants: [
+      { id: "v15-0mg", label: "0mg 70VG/30PG", price: 32.9 },
+      { id: "v15-3mg", label: "3mg 70VG/30PG", price: 34.9 }
+    ]
+  },
+  {
+    id: "p16",
+    slug: "radiola-perfect-day",
+    title: "Radiola Juices",
+    subtitle: "Perfect Day 80VG/20PG",
+    price: 36.9,
+    oldPrice: 42.9,
+    image: images.products.eliquidRadiolaPerfectDay,
+    images: [images.products.eliquidRadiolaPerfectDay],
+    description: "High-VG golden blend in glass bottle with protective cardboard canister. #vapeonmusic",
+    longDescription:
+      "Perfect Day from Radiola Juices is an 80VG / 20PG premium e-liquid for dense vapor production. Comes in a glass dropper bottle with an artistically designed kraft-paper tube packaging. Golden-amber liquid with music-themed vintage branding.",
+    rating: 5,
+    reviewCount: 52,
+    inStock: true,
+    brand: "Radiola Juices",
+    category: "E-Liquids",
+    onSale: true,
+    variants: [
+      { id: "v16-0mg", label: "0mg 80VG/20PG", price: 36.9 },
+      { id: "v16-3mg", label: "3mg 80VG/20PG", price: 38.9 }
+    ]
+  },
+  {
+    id: "p17",
+    slug: "radiola-strawberry-fields-forever",
+    title: "Radiola Juices",
+    subtitle: "Strawberry Fields Forever 60ml",
+    price: 32.9,
+    image: images.products.eliquidRadiolaTrio,
+    images: [images.products.eliquidRadiolaTrio],
+    description: "Strawberry-forward profile with 70VG / 30PG. Vintage vinyl-inspired label design.",
+    longDescription:
+      "Strawberry Fields Forever captures ripe strawberry flavor in a 70VG / 30PG blend. Part of the Radiola Juices music collection with gramophone logo and vinyl record artwork on every bottle.",
+    rating: 4,
+    reviewCount: 29,
+    inStock: true,
+    brand: "Radiola Juices",
+    category: "E-Liquids",
+    onSale: false
   },
   {
     id: "p9",
