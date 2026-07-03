@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/common/Container";
 import { images } from "@/lib/images";
 
@@ -7,45 +8,52 @@ const categories = [
     label: "starter kit bundle",
     image: images.categories.starter,
     span: "md:col-span-2",
-    height: "h-[260px] md:h-[340px]"
+    height: "h-[260px] md:h-[340px]",
+    href: "/products?category=starter%20kits"
   },
   {
     label: "VAPE & MODS",
     image: images.categories.vapeMods,
     span: "md:col-span-1",
-    height: "h-[260px] md:h-[340px]"
+    height: "h-[260px] md:h-[340px]",
+    href: "/products?category=premium%20mods"
   },
   {
     label: "TANKS & RDA",
     image: images.categories.tanks,
     span: "md:col-span-1",
-    height: "h-[220px] md:h-[280px]"
+    height: "h-[220px] md:h-[280px]",
+    href: "/products?category=Tanks%20%26%20rdas"
   },
   {
     label: "e- lIQUIDS",
     image: images.categories.eliquids,
     span: "md:col-span-1",
-    height: "h-[220px] md:h-[280px]"
+    height: "h-[220px] md:h-[280px]",
+    href: "/products?category=E-Liquids"
   },
   {
     label: "accessories",
     image: images.categories.accessories,
     span: "md:col-span-1",
-    height: "h-[220px] md:h-[280px]"
+    height: "h-[220px] md:h-[280px]",
+    href: "/products?category=Accessories"
   }
 ] as const;
 
 function CategoryTile({
   label,
   image,
+  href,
   className
 }: {
   label: string;
   image: string;
+  href: string;
   className?: string;
 }) {
   return (
-    <article className={`group relative overflow-hidden ${className ?? ""}`}>
+    <Link href={href} className={`group relative block overflow-hidden ${className ?? ""}`}>
       <Image
         src={image}
         alt={label}
@@ -59,7 +67,7 @@ function CategoryTile({
           {label}
         </h2>
       </div>
-    </article>
+    </Link>
   );
 }
 
@@ -73,6 +81,7 @@ export function CategoryGrid() {
               key={category.label}
               label={category.label}
               image={category.image}
+              href={category.href}
               className={`transition duration-300 group-hover/grid:brightness-[0.85] hover:!brightness-110 hover:z-10 ${category.span} ${category.height}`}
             />
           ))}

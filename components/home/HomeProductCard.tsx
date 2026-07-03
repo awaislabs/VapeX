@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/types/site";
+import { formatPrice } from "@/lib/format";
 import { StarRating } from "./StarRating";
 
 type HomeProductCardProps = {
@@ -31,11 +32,13 @@ export function HomeProductCard({ product }: HomeProductCardProps) {
           <StarRating size={13} />
         </div>
         <div className="mt-2 flex w-full items-center justify-center gap-2 text-[14px]">
-          <span className="text-black/45 line-through">{product.oldPrice}</span>
-          <span className="font-bold text-black">{product.price}</span>
+          {product.oldPrice ? (
+            <span className="text-black/45 line-through">{formatPrice(product.oldPrice)}</span>
+          ) : null}
+          <span className="font-bold text-black">{formatPrice(product.price)}</span>
         </div>
         <Link
-          href={`/product/${product.id}`}
+          href={`/product/${product.slug}`}
           className="mt-auto flex w-full items-center justify-center bg-brand px-4 py-3 text-center text-[10px] font-bold uppercase leading-none tracking-[0.14em] text-white transition hover:bg-brand-hover"
         >
           SHOP NOW

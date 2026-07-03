@@ -16,7 +16,7 @@ export function ProductsSection() {
         </div>
 
         <div className="group/products mt-12 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {products.map((product) => (
+          {products.slice(0, 4).map((product) => (
             <HomeProductCard key={product.id} product={product} />
           ))}
         </div>
